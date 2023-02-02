@@ -33,6 +33,21 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
+
+  // Set localStorage item
+  for(var i=9;i<18;i++){
+    var temp = 'hour-'+ i;
+    console.log(temp);
+    $("#"+temp).find("textarea").val(
+      localStorage.getItem(temp));
+
+  }
+
+// Retrieve the object from localStorage
+//var retrievedObject = localStorage.getItem('dataObject');
+
+// console.log retrieved item
+//console.log('retrieved data Object: ', JSON.parse(retrievedObject));
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
